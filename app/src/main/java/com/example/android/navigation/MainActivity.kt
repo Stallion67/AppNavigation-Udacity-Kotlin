@@ -32,4 +32,9 @@ class MainActivity : AppCompatActivity() {
         //Linking the navController to our ActionBar
         NavigationUI.setupActionBarWithNavController(this,navController)
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController=this.findNavController(R.id.myNavHostFragment)
+        return  navController.navigateUp()
+    }
 }
