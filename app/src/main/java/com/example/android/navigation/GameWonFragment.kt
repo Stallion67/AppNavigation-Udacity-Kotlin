@@ -34,6 +34,8 @@ class GameWonFragment : Fragment() {
                 inflater, R.layout.fragment_game_won, container, false)
         //back button on game won
         binding.nextMatchButton.setOnClickListener{
+            //This redirects to the game won fragment
+
             view :View ->  view.findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
         }
         return binding.root
